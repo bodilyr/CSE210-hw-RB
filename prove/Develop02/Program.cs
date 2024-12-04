@@ -8,8 +8,7 @@ class Program
 {
     static void Main(string[] args)
     {
-       //instantiate PromptGenerator object/class
-       PromptGenerator promptGenerator = new PromptGenerator();
+      
 
        //instantiate Journal object/class
        Journal myJournal = new Journal();
@@ -37,18 +36,9 @@ class Program
             switch (userOption)   
             {
                 case "1":
-                    //menu option Write
-                    //get a random prompt for the Write option on menu
-                    string prompt = promptGenerator.GetRandomPrompt();
-
-                    //create a new Entry
-                    Entry newEntry = new Entry(prompt);
-
-                    //display the prompt and capture user response
-                    newEntry.DisplayPrompt();
-
+                   
                     //add new entry to journal
-                    myJournal.AddEntry(newEntry);
+                    myJournal.AddEntry();
 
                     //tell user their entry has been recorded
                     Console.ForegroundColor = ConsoleColor.DarkBlue;

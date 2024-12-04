@@ -5,9 +5,16 @@ public class Journal
 {   //list to store all user entries
     public List<Entry> _entries = new List<Entry>();
 
+    private PromptGenerator _promptGen = new PromptGenerator();
+
+   
     //method that adds each of the user's entries to the Entry list (above)
-    public void AddEntry(Entry newEntry)
+    public void AddEntry()
     {
+       string prompt = _promptGen.GetRandomPrompt();
+       Console.WriteLine(prompt);
+       string entryText = Console.ReadLine();
+       Entry newEntry = new Entry(promptText);
         _entries.Add(newEntry);
     }
 
@@ -66,9 +73,7 @@ public class Journal
                        string entryText = parts[2];
 
                        //add saved entries to the Entry list
-                       Entry loadedEntry = new Entry(promptText);
-                        loadedEntry._date = date;
-                        loadedEntry._entryText = entryText;
+                       Entry loadedEntry = new Entry(promptText, entryText, date);
 
                         _entries.Add(loadedEntry);
                     }
