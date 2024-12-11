@@ -29,7 +29,7 @@ class Program
                     int breathDuration = int.Parse(Console.ReadLine());
                     
                     BreathingActivity breathingActivity = new BreathingActivity("Breathing Activity", "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.", breathDuration);
-                    Console.WriteLine():
+                    Console.WriteLine();                    
                     breathingActivity.Run();
                 break;
 
@@ -38,7 +38,7 @@ class Program
                     int listDuration = int.Parse(Console.ReadLine());
 
                     ListingActivity listActivity = new ListingActivity("Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.", listDuration, prompts);
-                    Console.WriteLine():
+                    Console.WriteLine();
                     listActivity.Run();
                 break;
 
@@ -47,13 +47,13 @@ class Program
                     int reflectDuration = int.Parse(Console.ReadLine());
 
                     ReflectingActivity reflectActivity = new ReflectingActivity ("Reflecting Activity", "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.", reflectDuration, prompts, questions);
-                    Console.WriteLine():
+                    Console.WriteLine();
                     reflectActivity.Run();
                 break;
 
                 case "4":
                     mindful = false;
-                    Console.WriteLine("Thanks for taking the time to practice mindfulness!!"):
+                    Console.WriteLine("Thanks for taking the time to practice mindfulness!!");
                 break;
 
                 default:
